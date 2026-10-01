@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI dan Implementasi AI di Industri Contact Center | Omnira</title>
+  <meta name="description" content="Pelajari bagaimana AI mengubah layanan pelanggan di contact center: chatbot, agent assist, analitik percakapan, dan lainnya.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body id="top">
+
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+
+  <header class="site-header" id="beranda">
+    <nav class="nav container" aria-label="Navigasi utama">
+      <a href="#top" class="brand" aria-label="Omnira, ke beranda">
+        <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="9" fill="#4A5FD1"/>
+          <circle cx="16" cy="16" r="6" fill="none" stroke="#fff" stroke-width="2.4"/>
+          <circle cx="16" cy="16" r="2" fill="#7FE0D6"/>
+        </svg>
+        <span>Omnira</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#implementasi">Implementasi</a></li>
+          <li><a href="#alur">Alur</a></li>
+          <li><a href="#dampak">Dampak</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a href="#kontak" class="btn btn-primary btn-sm">Hubungi Kami</a>
+      </div>
+    </nav>
+
+    <div class="hero container">
+      <div class="hero-copy">
+        <h1>AI dan Implementasi AI di Industri Contact Center</h1>
+        <p class="lead">
+          Dari chatbot yang menjawab pertanyaan rutin sampai analitik yang membaca emosi pelanggan,
+          AI membantu tim layanan bekerja lebih cepat, konsisten, dan tetap terasa manusiawi.
+        </p>
+        <div class="cta-row">
+          <a href="#implementasi" class="btn btn-primary">Pelajari Lebih Lanjut</a>
+          <a href="#kontak" class="btn btn-ghost">Hubungi Kami</a>
+        </div>
+        <ul class="hero-facts" aria-label="Ringkasan">
+          <li><strong>24/7</strong><span>Layanan tanpa jeda</span></li>
+          <li><strong>Multi-kanal</strong><span>WhatsApp, web, voice, email</span></li>
+          <li><strong>Human-in-the-loop</strong><span>Agen tetap memegang kendali</span></li>
+        </ul>
+      </div>
+
+      <!-- Demo percakapan -->
+      <div class="demo" aria-label="Contoh percakapan layanan pelanggan dengan AI">
+        <div class="demo-head">
+          <div class="demo-id">
+            <span class="avatar ai" aria-hidden="true">AI</span>
+            <div>
+              <strong>Asisten Virtual Omnira</strong>
+              <small><span class="status"></span> Online di WhatsApp</small>
+            </div>
+          </div>
+          <button class="replay" id="replayBtn" type="button" aria-label="Putar ulang contoh percakapan">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+          </button>
+        </div>
+
+        <div class="chat-body" id="chatBody">
+          <div class="msg user" data-step>Halo, pesanan saya belum sampai padahal sudah 5 hari.</div>
+          <div class="msg bot" data-step>Maaf atas ketidaknyamanannya. Saya cek dulu ya. Pesanan #OM-20931 sedang transit di Surabaya dan estimasi tiba besok.</div>
+          <div class="msg user" data-step>Bisa dipercepat? Saya butuh barangnya hari ini.</div>
+          <div class="msg bot" data-step>Saya teruskan ke agen prioritas beserta riwayat percakapan ini, jadi Anda tidak perlu mengulang cerita.</div>
+        </div>
+
+        <div class="insights" aria-label="Hasil analisis AI">
+          <span class="chip" data-step><i class="c-blue"></i> Intent: cek status pesanan</span>
+          <span class="chip" data-step><i class="c-amber"></i> Sentimen: cemas</span>
+          <span class="chip" data-step><i class="c-teal"></i> Eskalasi ke agen dengan konteks</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="konten">
+
+    <section class="section section-tight" aria-labelledby="judul-konteks">
+      <div class="container intro-grid">
+        <div>
+          <h2 id="judul-konteks">Mengapa contact center beralih ke AI</h2>
+        </div>
+        <div class="prose">
+          <p>
+            Pelanggan kini menghubungi bisnis lewat banyak kanal dan mengharapkan jawaban cepat kapan saja.
+            Volume interaksi naik, sementara biaya dan beban kerja agen ikut membesar.
+          </p>
+          <p>
+            AI mengambil alih pekerjaan yang berulang, membantu agen menangani kasus yang rumit,
+            dan memberi manajer gambaran yang jelas tentang apa yang sebenarnya dirasakan pelanggan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="implementasi" aria-labelledby="judul-implementasi">
+      <div class="container impl-grid">
+        <div class="impl-intro">
+          <h2 id="judul-implementasi">Enam penerapan AI yang paling sering dipakai</h2>
+          <p class="muted">Setiap penerapan bisa dimulai terpisah, lalu digabungkan dalam satu platform omnichannel.</p>
+          <a href="#kontak" class="btn btn-primary">Diskusikan kebutuhan Anda</a>
+        </div>
+
+        <ul class="impl-list">
+          <li class="impl-item">
+            <span class="icon i-blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/></svg>
+            </span>
+            <div>
+              <h3>Chatbot dan virtual agent</h3>
+              <p>Menjawab pertanyaan rutin seperti status pesanan, tagihan, dan reset akun secara otomatis di WhatsApp, web chat, dan telepon. Kasus sulit diteruskan ke agen lengkap dengan konteksnya.</p>
+              <span class="tag">Antrean lebih pendek</span>
+            </div>
+          </li>
+
+          <li class="impl-item">
+            <span class="icon i-teal" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/><path d="M19 4.5l.8 1.7 1.7.8-1.7.8-.8 1.7-.8-1.7-1.7-.8 1.7-.8Z"/></svg>
+            </span>
+            <div>
+              <h3>Agent assist</h3>
+              <p>Memberi saran jawaban, menampilkan artikel pengetahuan yang relevan, dan meringkas percakapan secara otomatis saat agen sedang melayani pelanggan.</p>
+              <span class="tag">Waktu penanganan lebih singkat</span>
+            </div>
+          </li>
+
+          <li class="impl-item">
+            <span class="icon i-amber" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 12h2M7 8v8M11 4v16M15 8v8M19 10v4M21 12h0"/></svg>
+            </span>
+            <div>
+              <h3>Analitik suara dan sentimen</h3>
+              <p>Mengubah panggilan menjadi teks, mengenali topik keluhan, dan mendeteksi emosi pelanggan agar masalah yang berulang cepat terlihat.</p>
+              <span class="tag">Wawasan pelanggan</span>
+            </div>
+          </li>
+
+          <li class="impl-item">
+            <span class="icon i-blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="3"/></svg>
+            </span>
+            <div>
+              <h3>Penilaian kualitas otomatis</h3>
+              <p>Menilai semua interaksi berdasarkan standar yang sama, bukan hanya sampel kecil, lalu menandai percakapan yang perlu coaching.</p>
+              <span class="tag">Cakupan QA penuh</span>
+            </div>
+          </li>
+
+          <li class="impl-item">
+            <span class="icon i-teal" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.3 11l7.4-4M8.3 13l7.4 4"/></svg>
+            </span>
+            <div>
+              <h3>Smart routing omnichannel</h3>
+              <p>Mengarahkan setiap kontak ke agen yang paling tepat berdasarkan maksud pelanggan, bahasa, prioritas, dan riwayat interaksinya di semua kanal.</p>
+              <span class="tag">Tepat sasaran</span>
+            </div>
+          </li>
+
+          <li class="impl-item">
+            <span class="icon i-amber" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="M8 15l3-4 3 2 5-6"/></svg>
+            </span>
+            <div>
+              <h3>Prediksi volume dan penjadwalan</h3>
+              <p>Memperkirakan lonjakan kontak dari pola historis sehingga jumlah agen dan jadwal shift bisa disiapkan lebih awal.</p>
+              <span class="tag">Staf lebih efisien</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="alur" aria-labelledby="judul-alur">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="judul-alur">Cara memulai implementasi AI</h2>
+          <p class="muted">Empat tahap yang bisa dijalankan bertahap, tanpa mengganggu layanan yang sedang berjalan.</p>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <span class="step-no">1</span>
+            <h3>Audit dan pilih use case</h3>
+            <p>Petakan jenis pertanyaan terbanyak dan tentukan yang paling cocok diotomasi lebih dulu.</p>
+          </li>
+          <li>
+            <span class="step-no">2</span>
+            <h3>Siapkan data dan pengetahuan</h3>
+            <p>Rapikan knowledge base, skrip, dan riwayat percakapan sebagai bahan belajar AI.</p>
+          </li>
+          <li>
+            <span class="step-no">3</span>
+            <h3>Pilot terbatas</h3>
+            <p>Uji di satu kanal atau satu topik, ukur hasilnya, lalu perbaiki sebelum diperluas.</p>
+          </li>
+          <li>
+            <span class="step-no">4</span>
+            <h3>Skala dan optimasi</h3>
+            <p>Perluas ke kanal lain dan pantau metrik secara rutin agar kualitas terus meningkat.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="dampak" aria-labelledby="judul-dampak">
+      <div class="container impact-grid">
+        <div class="impact-copy">
+          <h2 id="judul-dampak">Dampak yang bisa diharapkan</h2>
+          <p class="muted">
+            AI paling efektif jika dipakai untuk membantu agen, bukan menggantikan mereka.
+            Pekerjaan berulang diotomasi, sedangkan percakapan yang butuh empati tetap ditangani manusia.
+          </p>
+          <ul class="checks">
+            <li>Pelanggan mendapat jawaban lebih cepat</li>
+            <li>Agen fokus pada kasus yang bernilai tinggi</li>
+            <li>Manajer melihat tren keluhan secara real-time</li>
+          </ul>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong><span class="count" data-target="60" data-suffix="%">60%</span></strong>
+            <span>pertanyaan rutin dapat diotomasi</span>
+          </div>
+          <div class="stat">
+            <strong><span class="count" data-target="35" data-suffix="%">35%</span></strong>
+            <span>penyelesaian kasus lebih cepat</span>
+          </div>
+          <div class="stat">
+            <strong><span class="count" data-target="100" data-suffix="%">100%</span></strong>
+            <span>interaksi dapat dinilai kualitasnya</span>
+          </div>
+          <div class="stat">
+            <strong><span class="count" data-target="24" data-suffix="/7">24/7</span></strong>
+            <span>ketersediaan layanan pelanggan</span>
+          </div>
+          <p class="note">Angka bersifat ilustrasi untuk keperluan study case dan bukan hasil pengukuran nyata.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="faq" aria-labelledby="judul-faq">
+      <div class="container faq-grid">
+        <div>
+          <h2 id="judul-faq">Pertanyaan yang sering diajukan</h2>
+          <p class="muted">Belum menemukan jawabannya? Tim kami siap membantu.</p>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>Apakah AI akan menggantikan agen contact center?</summary>
+            <p>Tidak sepenuhnya. AI menangani pertanyaan rutin dan membantu agen, sedangkan kasus kompleks atau sensitif tetap ditangani manusia.</p>
+          </details>
+          <details>
+            <summary>Berapa lama waktu implementasi awal?</summary>
+            <p>Pilot untuk satu kanal dan satu topik umumnya bisa berjalan dalam hitungan minggu, tergantung kesiapan data dan sistem yang ada.</p>
+          </details>
+          <details>
+            <summary>Bagaimana dengan keamanan data pelanggan?</summary>
+            <p>Data dapat dimasking, akses dibatasi berdasarkan peran, dan seluruh aktivitas dicatat sesuai kebijakan privasi dan regulasi yang berlaku.</p>
+          </details>
+          <details>
+            <summary>Bisakah terhubung dengan sistem yang sudah kami pakai?</summary>
+            <p>Bisa. Platform omnichannel terhubung ke CRM, helpdesk, dan kanal pesan melalui API dan integrasi standar.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section" id="kontak" aria-labelledby="judul-kontak">
+      <div class="container cta-card">
+        <div class="cta-copy">
+          <h2 id="judul-kontak">Siap menyiapkan contact center yang lebih cerdas?</h2>
+          <p>Ceritakan kebutuhan Anda. Kami akan menghubungi dalam satu hari kerja untuk menjadwalkan sesi konsultasi gratis.</p>
+          <ul class="contact-mini">
+            <li>halo@omnira.example</li>
+            <li>+62 21 5555 0123</li>
+          </ul>
+        </div>
+
+        <form class="form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="nama">Nama lengkap</label>
+            <input type="text" id="nama" name="nama" autocomplete="name" placeholder="Contoh: Rina Pratama" required>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email kerja</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="nama@perusahaan.com" required>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="field">
+            <label for="kebutuhan">Kebutuhan utama</label>
+            <select id="kebutuhan" name="kebutuhan" required>
+              <option value="">Pilih salah satu</option>
+              <option>Chatbot dan virtual agent</option>
+              <option>Agent assist</option>
+              <option>Analitik percakapan</option>
+              <option>Platform omnichannel</option>
+            </select>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Kirim permintaan</button>
+          <p class="form-ok" id="formOk" role="status" hidden>Terima kasih! Permintaan Anda sudah kami terima.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="brand brand-light" aria-label="Omnira, ke atas">
+          <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="9" fill="#4A5FD1"/>
+            <circle cx="16" cy="16" r="6" fill="none" stroke="#fff" stroke-width="2.4"/>
+            <circle cx="16" cy="16" r="2" fill="#7FE0D6"/>
+          </svg>
+          <span>Omnira</span>
+        </a>
+        <p class="footer-desc">Solusi omnichannel dan layanan pelanggan berbasis teknologi AI.</p>
+      </div>
+
+      <div>
+        <h4>Kontak</h4>
+        <address>
+          PT Omnira Teknologi Nusantara<br>
+          Jl. Contoh Raya No. 88, Jakarta Selatan 12000<br>
+          <a href="mailto:halo@omnira.example">halo@omnira.example</a><br>
+          <a href="tel:+622155550123">+62 21 5555 0123</a>
+        </address>
+      </div>
+
+      <div>
+        <h4>Jelajahi</h4>
+        <ul class="footer-links">
+          <li><a href="#implementasi">Implementasi</a></li>
+          <li><a href="#alur">Alur</a></li>
+          <li><a href="#dampak">Dampak</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>&copy; <span id="year">2026</span> Omnira. Seluruh data kontak bersifat fiktif.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
